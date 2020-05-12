@@ -1,0 +1,18 @@
+1. A W/H question.
+2. A Multiple Choice Question (MCQ) type question (user can select one option from 5)
+3. A Multiple Response Question (MRQ) type question (user can select as many option as he wish, even user may not select any option)
+4. An essay type question
+
+At the bottom of the page, there should be a submit button and on click of that button, you have to show the result user has given in previous page)
+
+How to submit:
+==========
+1. Create a folder with your ID
+2. There should be two files in the folder:
+	i. index.html
+	ii. index.js (add your name as a comment at the top of this file)
+3. Create a zip file of this folder and mail to syedur.rahaman@bjitgroup.com 
+
+Deadline:
+=========
+2020/05/15
