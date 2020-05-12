@@ -57,6 +57,11 @@ document.getElementById("select-all").onclick = function () {
   }
 };
 
+function selectAllToggle() {
+  if (document.getElementById("select-all").checked) {
+    document.getElementById("select-all").checked=false;
+}
+}
 //fetching all the answers
 function fetchAnswers() {
   var answer1 = document.getElementById("q1answer").value;
@@ -79,7 +84,7 @@ function fetchAnswers() {
     if (items[i].type == "checkbox" && items[i].checked == true)
       answer3 += items[i].value + "\n";
   }
-  //console.log(answer1, answer2, answer3, answer4);
+  console.log(answer1, answer2, answer3, answer4);
   fieldValidator(answer1, answer2, answer4);
 }
 
