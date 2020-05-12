@@ -1,4 +1,4 @@
-//Md Mehedi Hasan
+//Md Mehedi Hasan 11091~
 
 //question ids on HTML h3 tag
 const idQ1 = "Q1";
@@ -59,8 +59,8 @@ document.getElementById("select-all").onclick = function () {
 
 function selectAllToggle() {
   if (document.getElementById("select-all").checked) {
-    document.getElementById("select-all").checked=false;
-}
+    document.getElementById("select-all").checked = false;
+  }
 }
 //fetching all the answers
 function fetchAnswers() {
@@ -84,15 +84,22 @@ function fetchAnswers() {
     if (items[i].type == "checkbox" && items[i].checked == true)
       answer3 += items[i].value + "\n";
   }
-  console.log(answer1, answer2, answer3, answer4);
-  fieldValidator(answer1, answer2, answer4);
+  //console.log(answer1, answer2, answer3, answer4);
+  fieldValidator(answer1, answer2, answer3, answer4);
 }
 
 //validating if all required answers were given
-function fieldValidator(answer1, answer2, answer4) {
+function fieldValidator(answer1, answer2, answer3, answer4) {
   if (answer1 == "" || answer2 == "" || answer4 == "") {
     alert("Answering Q1,Q2,Q3 are mandatory!");
+  } else {
+    showResult(answer1, answer2, answer3, answer4);
   }
+}
+
+function showResult(answer1, answer2, answer3, answer4) {
+  document.getElementById("presult").innerHTML =
+    answer1 + "</br>" + answer2 + "</br>" + answer3 + "</br>" + answer4;
 }
 
 function answerInsert() {}

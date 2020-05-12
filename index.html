@@ -13,71 +13,76 @@
   </head>
   <body>
     <h1>Welcome to Software Engineer Survey</h1>
-    <h2 id="Q1"></h2>
-    <input type="number" id="q1answer" name="q1answer" /><br /><br />
+    <div id="form">
+      <h2 id="Q1"></h2>
+      <input type="number" id="q1answer" name="q1answer" /><br /><br />
 
-    <h2 id="Q2"></h2>
-    <input type="radio" name="q2answer" value="Java" />
-    <label for="male">Java</label><br />
-    <input type="radio" name="q2answer" value="Javascript" />
-    <label for="female">Javascript</label><br />
-    <input type="radio" name="q2answer" value="C++" />
-    <label for="other">C++</label><br />
-    <input type="radio" name="q2answer" value="C" />
-    <label for="other">C</label><br />
-    <input type="radio" name="q2answer" value="Python" />
-    <label for="other">Python</label><br />
+      <h2 id="Q2"></h2>
+      <input type="radio" name="q2answer" value="Java" />
+      <label for="male">Java</label><br />
+      <input type="radio" name="q2answer" value="Javascript" />
+      <label for="female">Javascript</label><br />
+      <input type="radio" name="q2answer" value="C++" />
+      <label for="other">C++</label><br />
+      <input type="radio" name="q2answer" value="C" />
+      <label for="other">C</label><br />
+      <input type="radio" name="q2answer" value="Python" />
+      <label for="other">Python</label><br />
 
-    <h2 id="Q3"></h2>
-    <input
-      type="checkbox"
-      id="vehicle1"
-      name="q3answer"
-      value="Web development"
-      onchange="selectAllToggle()"
-    />
-    <label for="vehicle1"> Web development</label><br />
-    <input
-      type="checkbox"
-      id="vehicle2"
-      name="q3answer"
-      value="Andoid App Development"
-      onchange="selectAllToggle()"
-    />
-    <label for="vehicle2"> Andoid App Development</label><br />
-    <input
-      type="checkbox"
-      id="vehicle3"
-      name="q3answer"
-      value="iOS App Development"
-      onchange="selectAllToggle()"
-    />
-    <label for="vehicle3"> iOS App Development</label><br />
-    <input
-      type="checkbox"
-      id="vehicle3"
-      name="q3answer"
-      value="Automation/Testing"
-      onchange="selectAllToggle()"
-    />
-    <label for="vehicle3"> Automation/Testing</label><br />
-    <input
-      type="checkbox"
-      id="vehicle3"
-      name="q3answer"
-      value="Artificial Intelligence"
-      onchange="selectAllToggle()"
-    />
-    <label for="vehicle3"> Artificial Intelligence</label><br />
-    <input type="checkbox" id="select-all"/>
-    <label for="vehicle3"> All of the above</label><br />
+      <h2 id="Q3"></h2>
+      <input
+        type="checkbox"
+        id="vehicle1"
+        name="q3answer"
+        value="Web development"
+        onchange="selectAllToggle()"
+      />
+      <label for="vehicle1"> Web development</label><br />
+      <input
+        type="checkbox"
+        id="vehicle2"
+        name="q3answer"
+        value="Andoid App Development"
+        onchange="selectAllToggle()"
+      />
+      <label for="vehicle2"> Andoid App Development</label><br />
+      <input
+        type="checkbox"
+        id="vehicle3"
+        name="q3answer"
+        value="iOS App Development"
+        onchange="selectAllToggle()"
+      />
+      <label for="vehicle3"> iOS App Development</label><br />
+      <input
+        type="checkbox"
+        id="vehicle3"
+        name="q3answer"
+        value="Automation/Testing"
+        onchange="selectAllToggle()"
+      />
+      <label for="vehicle3"> Automation/Testing</label><br />
+      <input
+        type="checkbox"
+        id="vehicle3"
+        name="q3answer"
+        value="Artificial Intelligence"
+        onchange="selectAllToggle()"
+      />
+      <label for="vehicle3"> Artificial Intelligence</label><br />
+      <input type="checkbox" id="select-all" />
+      <label for="vehicle3"> All of the above</label><br />
 
-    <h2 id="Q4"></h2>
-    <textarea id="q4answer" rows="4" cols="50"></textarea>
+      <h2 id="Q4"></h2>
+      <textarea id="q4answer" rows="4" cols="50"></textarea>
 
-    <br /><br />
-    <button onclick="fetchAnswers()">Submit</button>
+      <br /><br />
+      <button id="submitbtn" onclick="fetchAnswers()">Submit</button>
+    </div>
 
+    <div id="result">
+      <p id="presult"></p>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>

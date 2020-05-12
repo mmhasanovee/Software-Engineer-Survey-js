@@ -1,11 +1,24 @@
 * {
   font-family: "Montserrat", sans-serif;
 }
-h1{
+h1 {
   letter-spacing: 4px;
   color: rgb(75, 6, 60);
 }
 
-body{
-    margin: 20px;
+body {
+  margin: 20px;
+}
+
+#submitbtn {
+  font-size: 25px;
+  background-color: #008cba;
+  color: white;
+}
+
+#submitbtn:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid #008cba;
+  cursor: pointer;
 }
