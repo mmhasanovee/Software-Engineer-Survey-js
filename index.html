@@ -9,22 +9,65 @@
   <body>
     <h1>Welcome to Software Engineer Survey</h1>
     <h3 id="Q1"></h3>
-    <input type="text" id="1" name="ques1" /><br /><br />
+    <input type="text" id="q1answer" name="q1answer" /><br /><br />
 
     <h3 id="Q2"></h3>
-    <input type="radio" name="q1answer" value="Java" />
+    <input type="radio" name="q2answer" value="Java" />
     <label for="male">Java</label><br />
-    <input type="radio" name="q1answer" value="Javascript" />
+    <input type="radio" name="q2answer" value="Javascript" />
     <label for="female">Javascript</label><br />
-    <input type="radio" name="q1answer" value="C++" />
+    <input type="radio" name="q2answer" value="C++" />
     <label for="other">C++</label><br />
-    <input type="radio" name="q1answer" value="C" />
+    <input type="radio" name="q2answer" value="C" />
     <label for="other">C</label><br />
-    <input type="radio" name="q1answer" value="Python" />
+    <input type="radio" name="q2answer" value="Python" />
     <label for="other">Python</label><br />
 
+    <h3 id="Q3"></h3>
+    <input
+      type="checkbox"
+      id="vehicle1"
+      name="q3answer"
+      value="Web development"
+    />
+    <label for="vehicle1"> Web development</label><br />
+    <input
+      type="checkbox"
+      id="vehicle2"
+      name="q3answer"
+      value="Andoid App Development"
+    />
+    <label for="vehicle2"> Andoid App Development</label><br />
+    <input
+      type="checkbox"
+      id="vehicle3"
+      name="q3answer"
+      value="iOS App Development"
+    />
+    <label for="vehicle3"> iOS App Development</label><br />
+    <input
+      type="checkbox"
+      id="vehicle3"
+      name="q3answer"
+      value="Automation/Testing"
+    />
+    <label for="vehicle3"> Automation/Testing</label><br />
+    <input
+      type="checkbox"
+      id="vehicle3"
+      name="q3answer"
+      value="Artificial Intelligence"
+    />
+    <label for="vehicle3"> Artificial Intelligence</label><br />
+    <input type="checkbox" id="select-all" name="q3answer" value="all" />
+    <label for="vehicle3"> All of the above</label><br />
+
+    <h3 id="Q4"></h3>
+    <textarea id="q4answer" rows="4" cols="50"></textarea>
+
     <br /><br />
-    <button onclick="fieldValidator()">Submit</button>
+    <button onclick="fetchAnswers()">Submit</button>
+
     <script src="index.js"></script>
   </body>
 </html>
