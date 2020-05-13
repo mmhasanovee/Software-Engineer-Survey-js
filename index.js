@@ -82,7 +82,7 @@ function fetchAnswers() {
   var answer3 = "";
   for (var i = 0; i < items.length; i++) {
     if (items[i].type == "checkbox" && items[i].checked == true)
-      answer3 += items[i].value + "\n";
+      answer3 += items[i].value + ", ";
   }
   //console.log(answer1, answer2, answer3, answer4);
   fieldValidator(answer1, answer2, answer3, answer4);
@@ -91,17 +91,24 @@ function fetchAnswers() {
 //validating if all required answers were given
 function fieldValidator(answer1, answer2, answer3, answer4) {
   if (answer1 == "" || answer2 == "" || answer4 == "") {
-    alert("Answering Q1,Q2,Q3 are mandatory!");
+    alert("Answering Q1, Q2, Q4 are mandatory!");
   } else {
+    if (answer3 == "") {
+      answer3 = "No answer";
+    }
     showResult(answer1, answer2, answer3, answer4);
   }
 }
 
 function showResult(answer1, answer2, answer3, answer4) {
-  document.getElementById("presult").innerHTML =
-    answer1 + "</br>" + answer2 + "</br>" + answer3 + "</br>" + answer4;
-}
+  var answerList = `✱Experience in years: <em class="answer"> ${answer1}</em><br/><br/>✱Main programming language is: <em class="answer"> ${answer2}</em><br/><br/> ✱Skills: <em class="answer"> ${answer3}</em><br/><br/> ✱About current role: <em class="answer"> ${answer4}</em>`;
+  document.getElementById("result").innerHTML = answerList;
 
-function answerInsert() {}
+  //toggling disply
+  var frm = document.getElementById("form");
+  var tnk = document.getElementById("thanks");
+  frm.style.display = "none";
+  tnk.style.display = "block";
+}
 
 //console.log(ques1, ques2, ques3, ques4);

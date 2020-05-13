@@ -32,46 +32,46 @@
       <h2 id="Q3"></h2>
       <input
         type="checkbox"
-        id="vehicle1"
+        id="v1"
         name="q3answer"
         value="Web development"
         onchange="selectAllToggle()"
       />
-      <label for="vehicle1"> Web development</label><br />
+      <label for="v1"> Web development</label><br />
       <input
         type="checkbox"
-        id="vehicle2"
+        id="v2"
         name="q3answer"
         value="Andoid App Development"
         onchange="selectAllToggle()"
       />
-      <label for="vehicle2"> Andoid App Development</label><br />
+      <label for="v2"> Andoid App Development</label><br />
       <input
         type="checkbox"
-        id="vehicle3"
+        id="v3"
         name="q3answer"
         value="iOS App Development"
         onchange="selectAllToggle()"
       />
-      <label for="vehicle3"> iOS App Development</label><br />
+      <label for="v3"> iOS App Development</label><br />
       <input
         type="checkbox"
-        id="vehicle3"
+        id="v4"
         name="q3answer"
         value="Automation/Testing"
         onchange="selectAllToggle()"
       />
-      <label for="vehicle3"> Automation/Testing</label><br />
+      <label for="v4"> Automation/Testing</label><br />
       <input
         type="checkbox"
-        id="vehicle3"
+        id="v5"
         name="q3answer"
         value="Artificial Intelligence"
         onchange="selectAllToggle()"
       />
-      <label for="vehicle3"> Artificial Intelligence</label><br />
+      <label for="v5"> Artificial Intelligence</label><br />
       <input type="checkbox" id="select-all" />
-      <label for="vehicle3"> All of the above</label><br />
+      <label for="v6"> All of the above</label><br />
 
       <h2 id="Q4"></h2>
       <textarea id="q4answer" rows="4" cols="50"></textarea>
@@ -80,8 +80,9 @@
       <button id="submitbtn" onclick="fetchAnswers()">Submit</button>
     </div>
 
-    <div id="result">
-      <p id="presult"></p>
+    <div id="resultContainer">
+      <h2 id="thanks">Hi, thanks for your response!</h2>
+      <h3 id="result"></h3>
     </div>
     <script src="index.js"></script>
   </body>
