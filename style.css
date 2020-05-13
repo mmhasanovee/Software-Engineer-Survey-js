@@ -2,9 +2,14 @@
   font-family: "Montserrat", sans-serif;
 }
 h1 {
-  letter-spacing: 4px;
-  color: blueviolet;
-  text-decoration: underline;
+  display: inline-block;
+  padding: 1%;
+  background: #379683;
+  color: #fff;
+  letter-spacing: 3px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 body {
@@ -13,26 +18,29 @@ body {
 
 #submitbtn {
   font-size: 25px;
-  background-color: blueviolet;
+  background-color: #05386b;
   color: white;
 }
 
 #submitbtn:hover {
   background-color: white;
   color: black;
-  border: 2px solid blueviolet;
+  border: 2px solid #05386b;
   cursor: pointer;
 }
 
-.answer{
-  color: blueviolet;
+.answer {
+  color: #d8230b;
 }
 
-#thanks{
-  color: rgb(23, 167, 99);
-  letter-spacing: 2px;
+#resultContainer {
+  color: #586069;
+  box-shadow: 0 10px 30px -15px rgba(48, 44, 44, 0.7);
+  padding: 2%;
   display: none;
 }
 
-
-
+#thanks {
+  color: rgb(23, 167, 99);
+  letter-spacing: 2px;
+}

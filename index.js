@@ -13,12 +13,6 @@ function Question(no, title, type) {
   this.type = type;
 }
 
-//constructor for answers
-function answers(qno, answer) {
-  this.qno = qno;
-  this.answer = answer;
-}
-
 const ques1 = new Question(
   1,
   "How many years of experience do you have?",
@@ -43,13 +37,13 @@ const ques4 = new Question(
   "ESSAY"
 );
 
-//manipulating dom
+//manipulating dom with questions
 document.getElementById(idQ1).innerHTML = idQ1 + ". " + ques1.title;
 document.getElementById(idQ2).innerHTML = idQ2 + ". " + ques2.title;
 document.getElementById(idQ3).innerHTML = idQ3 + ". " + ques3.title;
 document.getElementById(idQ4).innerHTML = idQ4 + ". " + ques4.title;
 
-//Selecting all the elements on select all click for question3
+//Selecting all the elements on select button for q3
 document.getElementById("select-all").onclick = function () {
   var checkboxes = document.getElementsByName("q3answer");
   for (var checkbox of checkboxes) {
@@ -62,6 +56,7 @@ function selectAllToggle() {
     document.getElementById("select-all").checked = false;
   }
 }
+
 //fetching all the answers
 function fetchAnswers() {
   var answer1 = document.getElementById("q1answer").value;
@@ -88,7 +83,7 @@ function fetchAnswers() {
   fieldValidator(answer1, answer2, answer3, answer4);
 }
 
-//validating if all required answers were given
+//validating if required answers were given
 function fieldValidator(answer1, answer2, answer3, answer4) {
   if (answer1 == "" || answer2 == "" || answer4 == "") {
     alert("Answering Q1, Q2, Q4 are mandatory!");
@@ -100,15 +95,15 @@ function fieldValidator(answer1, answer2, answer3, answer4) {
   }
 }
 
+//injecting result in the dom
 function showResult(answer1, answer2, answer3, answer4) {
-  var answerList = `✱Experience in years: <em class="answer"> ${answer1}</em><br/><br/>✱Main programming language is: <em class="answer"> ${answer2}</em><br/><br/> ✱Skills: <em class="answer"> ${answer3}</em><br/><br/> ✱About current role: <em class="answer"> ${answer4}</em>`;
+  var answerList = `✱Experience in years: <b class="answer"> ${answer1}</b><br/><br/>✱Main programming language is: <b class="answer"> ${answer2}</b><br/><br/> ✱Skills: <b class="answer"> ${answer3}</b><br/><br/> ✱About current role: <b class="answer"> ${answer4}</b>`;
   document.getElementById("result").innerHTML = answerList;
 
   //toggling disply
   var frm = document.getElementById("form");
-  var tnk = document.getElementById("thanks");
+  var tnk = document.getElementById("resultContainer");
   frm.style.display = "none";
   tnk.style.display = "block";
 }
 
-//console.log(ques1, ques2, ques3, ques4);
